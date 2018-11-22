@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wave"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="216dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="287dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo20" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="260dp"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:layout_width="269dp"
+            android:layout_height="42dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/et_bg"
+            android:ems="20"
+            android:hint="أسم المستخدم"
+            android:paddingRight="10dp"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_width="269dp"
+            android:layout_height="42dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/et_bg"
+            android:ems="20"
+            android:hint="الرقم السرى"
+            android:paddingRight="10dp"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginBottom="168dp"
+        android:background="#1b506d"
+        android:text="login"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="480dp"
+        android:text="نسيت الرقم السرى ؟"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="500dp"
+        android:layout_centerHorizontal="true"
+        android:background="#000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="انشاء حساب جديد ؟"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#1b506d" />
+
+
+</RelativeLayout>
