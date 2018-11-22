@@ -6,12 +6,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.georgesamuel.darslidemo.utils.AppConstants;
 
 
 public class LoginActivity extends AppCompatActivity {
     EditText edtUserName;
     EditText edtPassword;
     Button btnLogin;
+    TextView btnSignup;
 
 
     @Override
@@ -31,7 +36,21 @@ public class LoginActivity extends AppCompatActivity {
                 login();
             }
         });
+        btnSignup = findViewById(R.id.btnSignup);
+        btnSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navigateToSignup();
 
+            }
+        });
+
+    }
+
+    private void navigateToSignup() {
+        Intent intent = new Intent(this, SignupLogout.class);
+        startActivity(intent);
+        finish();
     }
 
     void login() {
@@ -45,14 +64,19 @@ public class LoginActivity extends AppCompatActivity {
         } else if (password.length() < 8) {
             edtPassword.setError("من فضلك قم بادخال رقم مرور صحيح");
 
-        } else {
+        } else if (userName.equalsIgnoreCase(AppConstants.USERNAME) && password.equalsIgnoreCase(AppConstants.PASSWORD)) {
             navigateToHome();
+            new SharedPrefConfig(this).setLoginStatus(true);
+        } else {
+            Toast.makeText(this, "اسم المستخدم اوكلمة المررور غير صحيحة", Toast.LENGTH_SHORT).show();
+
         }
     }
 
     private void navigateToHome() {
         Intent intent = new Intent(this, MaterialActivity.class);
         startActivity(intent);
-
+        finish();
     }
+
 }

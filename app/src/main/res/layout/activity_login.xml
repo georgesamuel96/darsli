@@ -34,8 +34,9 @@
             android:layout_width="269dp"
             android:layout_height="42dp"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/et_bg"
+            android:background="@drawable/edit_text_bg"
             android:ems="20"
+            android:gravity="right"
             android:hint="أسم المستخدم"
             android:paddingRight="10dp"
             android:textColor="#000000"
@@ -47,7 +48,7 @@
             android:layout_height="42dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
-            android:background="@drawable/et_bg"
+            android:background="@drawable/edit_text_bg"
             android:ems="20"
             android:gravity="right"
             android:hint="كلمة المرور"
@@ -63,11 +64,13 @@
             android:layout_height="wrap_content"
 
             android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
             android:layout_marginTop="24dp"
-            android:background="#1b506d"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/btn_bg"
             android:text="login"
-            android:textColor="#FFFFFF" />
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
 
     </LinearLayout>
@@ -89,6 +92,7 @@
         android:visibility="gone" />
 
     <TextView
+        android:id="@+id/btnSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

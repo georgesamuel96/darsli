@@ -1,5 +1,6 @@
 package com.example.georgesamuel.darslidemo;
 
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,9 @@ public class SignupLogout extends AppCompatActivity {
             public void onClick(View v) {
                 teacher_linear.setVisibility(View.GONE);
                 stu_linear.setVisibility(View.VISIBLE);
+                stu.setBackgroundColor(ContextCompat.getColor(SignupLogout.this,android.R.color.white));
+
+                teacher.setBackgroundColor(ContextCompat.getColor(SignupLogout.this,android.R.color.darker_gray));
             }
         });
 
@@ -34,6 +38,10 @@ public class SignupLogout extends AppCompatActivity {
             public void onClick(View v) {
                 stu_linear.setVisibility(View.GONE);
                 teacher_linear.setVisibility(View.VISIBLE);
+                teacher.setBackgroundColor(ContextCompat.getColor(SignupLogout.this,android.R.color.white));
+
+                stu.setBackgroundColor(ContextCompat.getColor(SignupLogout.this,android.R.color.darker_gray));
+
             }
         });
     }

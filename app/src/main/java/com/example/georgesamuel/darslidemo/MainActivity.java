@@ -7,24 +7,31 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
     Handler timer;
+    boolean isLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        isLogin = new SharedPrefConfig(this).getLoginStatus();
         timer = new Handler();
         timer.postDelayed(new Runnable() {
             @Override
             public void run() {
-                navigateToLogin();
+                navigateToNext(isLogin);
 
             }
         }, 2000L);
 
     }
 
-    private void navigateToLogin() {
-        Intent intent = new Intent(this, LoginActivity.class);
+    private void navigateToNext(Boolean isLogin) {
+        Intent intent = null;
+        if (isLogin) {
+            intent = new Intent(this, MaterialActivity.class);
+        } else {
+            intent = new Intent(this, LoginActivity.class);
+        }
         startActivity(intent);
         finish();
     }
