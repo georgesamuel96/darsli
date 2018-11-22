@@ -39,11 +39,11 @@ public class LoginActivity extends AppCompatActivity {
         String password = edtPassword.getText().toString().trim();
 
         if (userName.isEmpty()) {
-            edtUserName.setError("من فضلك قم باخال اسم المستخدم");
+            edtUserName.setError("من فضلك قم بادخال اسم المستخدم");
         } else if (password.isEmpty()) {
-            edtPassword.setError("من فضلك قم باخال الرقم السري");
+            edtPassword.setError("من فضلك قم بادخال كلمة المرور");
         } else if (password.length() < 8) {
-            edtPassword.setError("من فضلك قم رقم سري صحيح");
+            edtPassword.setError("من فضلك قم بادخال رقم مرور صحيح");
 
         } else {
             navigateToHome();
